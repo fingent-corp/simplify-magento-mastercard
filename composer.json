@@ -1,0 +1,31 @@
+{
+    "name": "mastercard/module-simplifycommerce",
+    "version": "3.2.0",
+    "description": "Mastercard Payment Gateway Services - Simplify",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Tomasz Waraksa",
+            "email": "tomasz.waraksa@mastercard.com"
+        },
+        {
+            "name": "On Tap Networks Ltd",
+            "email": "info@ontapgroup.com"
+        }
+    ],
+    "require": {
+        "magento/framework": "^101.0.0|^102.0.0|^103.0.0"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "psr-4": {
+            "MasterCard\\SimplifyCommerce\\": ""
+        },
+        "classmap": [
+            "lib/simplifycommerce-sdk-php/lib/"
+        ],
+        "files": [
+            "registration.php"
+        ]
+    }
+}

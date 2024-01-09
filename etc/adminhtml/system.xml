@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2013-2021 Mastercard
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="simplifycommerce" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1" translate="label comment" type="text">
+                <label>Mastercard Payment Gateway Services - Simplify</label>
+                <comment><![CDATA[Accept credit/debit cards in your Magento store.]]></comment>
+                <fieldset_css>complex</fieldset_css>
+                <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+                <field id="version_info" type="text" translate="label comment" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>MasterCard\SimplifyCommerce\Block\Adminhtml\ModuleVersion</frontend_model>
+                </field>
+                <group id="simplifycommerce_modal" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Modal Payment Option</label>
+                    <field id="active" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                        <label>Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce/active</config_path>
+                    </field>
+                    <field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                        <label>Title</label>
+                        <config_path>payment/simplifycommerce/title</config_path>
+                    </field>
+                    <field id="sort_order" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="25" translate="label" type="text">
+                        <label>Display Order</label>
+                        <frontend_class>validate-number</frontend_class>
+                        <config_path>payment/simplifycommerce/sort_order</config_path>
+                    </field>
+                    <field id="public_key" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Public API Key</label>
+                        <config_path>payment/simplifycommerce/public_key</config_path>
+                    </field>
+                    <field id="private_key" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="40" translate="label" type="obscure">
+                        <label>Private API Key</label>
+                        <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                        <config_path>payment/simplifycommerce/private_key</config_path>
+                    </field>
+                    <field id="debug" translate="label" type="select" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Debug</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce/debug</config_path>
+                    </field>
+                    <field id="payment_action" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Payment Action</label>
+                        <source_model>MasterCard\SimplifyCommerce\Model\Adminhtml\Source\PaymentAction</source_model>
+                        <config_path>payment/simplifycommerce/payment_action</config_path>
+                    </field>
+                    <field id="order_status" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="70" translate="label" type="select">
+                        <label>New Order Status</label>
+                        <source_model>MasterCard\SimplifyCommerce\Model\Config\Source\Order\Status\Pendingpayment</source_model>
+                        <config_path>payment/simplifycommerce/order_status</config_path>
+                    </field>
+                    <field id="allowspecific" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="110" translate="label" type="allowspecific">
+                        <label>Payment from Applicable Countries</label>
+                        <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                        <config_path>payment/simplifycommerce/allowspecific</config_path>
+                    </field>
+                    <field id="specificcountry" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="111" translate="label" type="multiselect">
+                        <label>Payment from Specific Countries</label>
+                        <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                        <config_path>payment/simplifycommerce/specificcountry</config_path>
+                        <can_be_empty>1</can_be_empty>
+                        <depends>
+                            <field id="allowspecific">1</field>
+                        </depends>
+                    </field>
+                    <field id="vault_active" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Vault Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce_vault/active</config_path>
+                    </field>
+                </group>
+                <group id="simplifycommerce_embedded" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Embedded Payment Option</label>
+
+                    <field id="active" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                        <label>Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce_embedded/active</config_path>
+                    </field>
+                    <field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                        <label>Title</label>
+                        <config_path>payment/simplifycommerce_embedded/title</config_path>
+                    </field>
+                    <field id="sort_order" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="25" translate="label" type="text">
+                        <label>Display Order</label>
+                        <frontend_class>validate-number</frontend_class>
+                        <config_path>payment/simplifycommerce_embedded/sort_order</config_path>
+                    </field>
+                    <field id="public_key" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="30" translate="label" type="text">
+                        <label>Public API Key</label>
+                        <config_path>payment/simplifycommerce_embedded/public_key</config_path>
+                    </field>
+                    <field id="private_key" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="40" translate="label" type="obscure">
+                        <label>Private API Key</label>
+                        <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                        <config_path>payment/simplifycommerce_embedded/private_key</config_path>
+                    </field>
+                    <field id="debug" translate="label" type="select" sortOrder="45" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Debug</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce_embedded/debug</config_path>
+                    </field>
+                    <field id="payment_action" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Payment Action</label>
+                        <source_model>MasterCard\SimplifyCommerce\Model\Adminhtml\Source\PaymentAction</source_model>
+                        <config_path>payment/simplifycommerce_embedded/payment_action</config_path>
+                    </field>
+                    <field id="order_status" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="70" translate="label" type="select">
+                        <label>New Order Status</label>
+                        <source_model>MasterCard\SimplifyCommerce\Model\Config\Source\Order\Status\Pendingpayment</source_model>
+                        <config_path>payment/simplifycommerce_embedded/order_status</config_path>
+                    </field>
+                    <field id="allowspecific" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="110" translate="label" type="allowspecific">
+                        <label>Payment from Applicable Countries</label>
+                        <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                        <config_path>payment/simplifycommerce_embedded/allowspecific</config_path>
+                    </field>
+                    <field id="specificcountry" showInDefault="1" showInStore="0" showInWebsite="1" sortOrder="111" translate="label" type="multiselect">
+                        <label>Payment from Specific Countries</label>
+                        <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                        <config_path>payment/simplifycommerce_embedded/specificcountry</config_path>
+                        <can_be_empty>1</can_be_empty>
+                        <depends>
+                            <field id="allowspecific">1</field>
+                        </depends>
+                    </field>
+                    <field id="vault_active" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Vault Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>payment/simplifycommerce_embedded_vault/active</config_path>
+                    </field>
+                    <field id="button_color" translate="label" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Hosted Payments Button Color</label>
+                        <config_path>payment/simplifycommerce_embedded/button_color</config_path>
+                        <frontend_model>MasterCard\SimplifyCommerce\Block\Adminhtml\ColorPicker</frontend_model>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>
