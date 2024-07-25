@@ -45,8 +45,8 @@ Log on to your Magento 2 server and navigate to Magento installation folder. The
 
 Run the following commands to download and install the module:
 
-    composer config repositories.mastercard-module-simplifycommerce git https://github.com/simplifycom/simplify-magento-module.git
-    composer require mastercard/module-simplifycommerce
+    composer config repositories.mastercard-module-simplifycommerce git https://github.com/fingent-corp/simplify-magento-mastercard.git
+    composer require mastercard/module-simplifycommerce:dev-main
     ./bin/magento module:enable MasterCard_SimplifyCommerce
     ./bin/magento setup:upgrade
     ./bin/magento cache:clean
