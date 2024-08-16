@@ -20,6 +20,7 @@ The Standard payment form in some of the previous releases is now deprecated and
 ## Support
 
 For any issues or enhancement requests you have with this module, please raise them with the bank's support team. Please make sure you also provide your module & magento version as well as your merchant ID where applicable. This will help to speed up the troubleshooting of any issues you are having.
+For customer support: [https://mpgsfgs.atlassian.net/servicedesk/customer/portals](https://mpgsfgs.atlassian.net/servicedesk/customer/portals/)
 
 ### Composer
 To download and install the components you need Composer, a PHP package manager. If it's not yet there on your Magento 2 server, install it first. Please follow the instructions specific for your operating system: [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
