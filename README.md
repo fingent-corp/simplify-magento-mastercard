@@ -9,7 +9,6 @@ The module allows payments using Simplify Commerce Hosted Payments. Simplify Com
 ## Prerequisites
 ### Magento 2
 This module is compatible with:
-- Magento 2.2
 - Magento 2.3
 - Magento 2.4
 
@@ -17,21 +16,25 @@ Community and Commerce Edition are both supported.
  
 The Standard payment form in some of the previous releases is now deprecated and out of support.
 
+## Documentation
+
+The official documentation for this module is available on: [https://mpgs.fingent.wiki/target/magento-2-mastercard-payment-gateway-services/version-compatibility/](https://mpgs.fingent.wiki/target/magento-2-mastercard-payment-gateway-services/version-compatibility/)
+
 ## Support
 
 For any issues or enhancement requests you have with this module, please raise them with the bank's support team. Please make sure you also provide your module & magento version as well as your merchant ID where applicable. This will help to speed up the troubleshooting of any issues you are having.
 For customer support: [https://mpgsfgs.atlassian.net/servicedesk/customer/portals](https://mpgsfgs.atlassian.net/servicedesk/customer/portals/)
+
+We recommend that you configure the module using Simplify Commerce Sandbox configuration. This way you can make sure everything works well, before you start receiving live payments. For testing module configuration you can use test card numbers provided by Simplify Commerce at [https://simplify.com/commerce/docs/testing/test-card-numbers](https://simplify.com/commerce/docs/testing/test-card-numbers). You will find more details about the configuration in the following chapters.     
+
+## Installation
+Before installing the module, make a full backup of your site.
 
 ### Composer
 To download and install the components you need Composer, a PHP package manager. If it's not yet there on your Magento 2 server, install it first. Please follow the instructions specific for your operating system: [https://getcomposer.org/doc/00-intro.md](https://getcomposer.org/doc/00-intro.md)
 
 ### Simplify Commerce Account
 Before you can use the module, you must have a Simplify Commerce account [https://www.simplify.com/commerce/](https://www.simplify.com/commerce/)
-
-We recommend that you configure the module using Simplify Commerce Sandbox configuration. This way you can make sure everything works well, before you start receiving live payments. For testing module configuration you can use test card numbers provided by Simplify Commerce at [https://simplify.com/commerce/docs/testing/test-card-numbers](https://simplify.com/commerce/docs/testing/test-card-numbers). You will find more details about the configuration in the following chapters.     
-
-## Installation
-Before installing the module, make a full backup of your site.
 
 ### Installation using PHP Composer
 The preferred method to install the module is by using PHP Composer:
@@ -66,7 +69,7 @@ If you want to uninstall the previously installed Simplify Commerce Payment Gate
 ### Manual installation 
 If you prefer to deploy and install the module without Composer, proceed with the following steps:
 
-Download module from [https://github.com/simplifycom/simplify-magento-module/releases](https://github.com/simplifycom/simplify-magento-module/releases).
+Download module from [https://github.com/simplifycom/simplify-magento-module/releases](https://github.com/fingent-corp/simplify-magento-mastercard/releases).
 
 Create folder structure inside the Magento main folder:
 
