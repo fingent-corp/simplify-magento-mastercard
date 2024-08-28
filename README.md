@@ -1,3 +1,7 @@
+<p align="center">
+<a href="https://www.fingent.com/"><img alt="Fingent logo" height="50px" src="https://www.fingent.com/wp-content/uploads/Fingent-Logo-01.png"/></a>&nbsp;&nbsp;<img alt="MC logo" height="50px" src="https://www.mastercard.co.in/content/dam/public/mastercardcom/in/en/logos/mc-logo-52.svg"/>
+</p>
+
 # Simplify Commerce Payment Gateway for Magento 2
 
 ## Overview
@@ -18,7 +22,7 @@ The Standard payment form in some of the previous releases is now deprecated and
 
 ## Documentation
 
-The official documentation for this module is available on: [https://mpgs.fingent.wiki/target/magento-2-mastercard-payment-gateway-services/version-compatibility/](https://mpgs.fingent.wiki/target/magento-2-mastercard-payment-gateway-services/version-compatibility/)
+The official documentation for this module is available on: [https://mpgs.fingent.wiki/simplify-commerce/simplify-commerce-payment-gateway-for-magento-2/overview](https://mpgs.fingent.wiki/simplify-commerce/simplify-commerce-payment-gateway-for-magento-2/overview)
 
 ## Support
 
@@ -55,7 +59,7 @@ Run the following commands to download and install the module:
     ./bin/magento setup:upgrade
     ./bin/magento cache:clean
 
-When asked by Composer for user name and password for Magento repository at [https://repo.magento.com](https://repo.magento.com), enter the Magento Marketplace public key as user name, and private key as password.
+When asked by Composer for username and password for Magento repository at [https://repo.magento.com](https://repo.magento.com), enter the Magento Marketplace public key as user name, and private key as password.
 
 Verify whether the module has been successfully installed. Log in to Magento Admin dashboard and go to *Stores* > *Configuration* > *Sales* > *Payment Methods*. Settings of the Simplify Commerce module should be there under the name "Mastercard Payment Gateway Services - Simplify".
 
@@ -107,7 +111,7 @@ A few Payment Options are available under the Simplify Commerce Payment Gateway 
 * *Payment Action*: determines when the buyer's card will be charged. If you select *Payment*, the card will be charged immediately. If you select *Authorization*, the payment will be verified and authorized, but no money will be charged yet. Only when you issue an invoice for the received order will the card be charged.
 * *New Order Status*: status assigned to a newly created order before the payment has been received
 * *Payment from Applicable Countries*: countries from which customers are allowed in your online store
-* *Payment from Specific Countries*: This option is available if *Payment from Applicable Countries* option is set to the *Specific Countries* mode. It's possible to choose a few countries for whose the Payment Method will be available. The billing address is used to identify the country on the Checkout Page.
+* *Payment from Specific Countries*: This option is available if *Payment from Applicable Countries* option is set to the *Specific Countries* mode. It's possible to choose a few countries for who's the Payment Method will be available. The billing address is used to identify the country on the Checkout Page.
 * *Vault*: if enabled, provides store customers with the ability to use the previously saved card information for checkout and the Magento Instant Purchase feature
 
 ## License
